@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Mazo {
-    Carta carta = new Carta();
+    private Carta carta;
     private HashMap<Integer, Carta> listaCartas = new HashMap<>();
-    int key;
+    //int key;
     public Mazo() {
     }
     public Mazo(HashMap<Integer, Carta> listaCartas) {
@@ -16,20 +16,14 @@ public class Mazo {
         return listaCartas;
     }
 
-    public void setKey(int key) {
-        this.key = key;
-    }
 
-    public int getKey() {
-        return key;
-    }
 
     public Mazo(Carta carta) {
         this.carta = carta;
     }
 
     public void agregarCarta(Carta carta){
-        key = 0;
+
         listaCartas.put(0,carta);
     }
 
